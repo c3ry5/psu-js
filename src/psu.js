@@ -39,7 +39,7 @@
 					eventHandler.events[events[key]] = typeof cb === "function" ? [cb] : cb;
 				}
 			} else {
-				if (Object.prototype.toString.call(tmg.eventHandler.events[events[key]]) === "[object Array]" && typeof events[key] === "string") {
+				if (Object.prototype.toString.call(eventHandler.events[events[key]]) === "[object Array]" && typeof events[key] === "string") {
 					arr = typeof cb === "function" ? [cb] : cb;
 					for (k in arr) {
 						if (eventHandler.events[events[key]].toString().indexOf(arr[k]) <= -1 && !isNaN(k)) {
